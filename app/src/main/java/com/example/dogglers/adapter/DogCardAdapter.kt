@@ -23,6 +23,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.dogglers.R
+import com.example.dogglers.const.Layout
 import com.example.dogglers.data.DataSource
 import com.example.dogglers.model.Dog
 
@@ -52,7 +53,7 @@ class DogCardAdapter(
         val adapterLayout = LayoutInflater.from(parent.context)
 
         val view = when(layout){
-            1,2 -> adapterLayout.inflate(R.layout.vertical_horizontal_list_item, parent, false)
+            Layout.VERTICAL, Layout.HORIZONTAL -> adapterLayout.inflate(R.layout.vertical_horizontal_list_item, parent, false)
             else -> adapterLayout.inflate(R.layout.grid_list_item, parent, false)
         }
 
