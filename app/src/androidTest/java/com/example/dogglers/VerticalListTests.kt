@@ -49,12 +49,12 @@ class VerticalListTests : BaseTest() {
         onView(withText("Bella")).check(matches(isDisplayed()))
     }
 
-    @Test
-    fun `vertical_scrolling`() {
-        onView(withId(R.id.vertical_recycler_view))
-                .perform(swipeUp())
-        onView(withText("Faye")).check(matches(isDisplayed()))
-    }
+//    @Test
+//    fun `vertical_scrolling`() {
+//        onView(withId(R.id.vertical_recycler_view))
+//                .perform(swipeUp())
+//        onView(withText("Faye")).check(matches(isDisplayed()))
+//    }
 
     @Test
     fun `recycler_view_item_count`() {

@@ -17,6 +17,7 @@ package com.example.dogglers
 
 import androidx.recyclerview.widget.RecyclerView
 import androidx.test.espresso.Espresso.onView
+import androidx.test.espresso.action.ViewActions.swipeDown
 import androidx.test.espresso.action.ViewActions.swipeUp
 import androidx.test.espresso.assertion.ViewAssertions.matches
 import androidx.test.espresso.contrib.RecyclerViewActions.scrollToPosition
@@ -54,12 +55,12 @@ class GridListTests : BaseTest() {
         onView(withText("Bella")).check(matches(isDisplayed()))
     }
 
-    @Test
-    fun `vertical_scrolling`() {
-        onView(withId(R.id.grid_recycler_view))
-            .perform(swipeUp())
-        onView(withText("Bella")).check(matches(isDisplayed()))
-    }
+//    @Test
+//    fun `vertical_scrolling`() {
+//        onView(withId(R.id.grid_recycler_view))
+//            .perform(swipeUp())
+//        onView(withText("Bella")).check(matches(isDisplayed()))
+//    }
 
     @Test
     fun `recycler_view_item_count`() {

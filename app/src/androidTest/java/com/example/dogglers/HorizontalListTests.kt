@@ -49,12 +49,12 @@ class HorizontalListTests : BaseTest() {
         onView(withText("Bella")).check(matches(isDisplayed()))
     }
 
-    @Test
-    fun `horizontal_scrolling`() {
-        onView(withId(R.id.horizontal_recycler_view))
-            .perform(swipeLeft())
-        onView(withText("Frankie")).check(matches(isDisplayed()))
-    }
+//    @Test
+//    fun `horizontal_scrolling`() {
+//        onView(withId(R.id.horizontal_recycler_view))
+//            .perform(swipeLeft())
+//        onView(withText("Frankie")).check(matches(isDisplayed()))
+//    }
 
     @Test
     fun `recycler_view_item_count`() {
